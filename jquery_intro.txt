@@ -1,0 +1,34 @@
+Présentation de Jquery : 
+Jquery est une bibliothèque (parfois appelé framework tort)
+permet de faciliter l'écriture du code js.
+
+bibliothèque = 1 fichier préparé. 
+framework = ensemble de fichiers préparés dans une architecture déjà prete. 
+
+Le slogan de JQUERY est : "write less, do more" (en français: Ecrivez moins, faites-en plus).
+
+Pour slider, nous écrivons 150 lignes de js ou alors 10 lignes de JQUERY ...
+L'objectif de JQUERY est de faire gagner du temps et de la productivité; 
+
+Avant de s'attaquer à une bibliothèque (ou un framework ...) JS il est recommandé et quasi indispensable de connaitre le language JAVASCRIPT à son état naturel (on parle alors de javascript pur, natif, ou basic).
+Si on se forme directement à jquery on ne connaitrait que ça.
+En se formant à javascript cela nous ouvre les portes de toutes les autre librairies.
+Pour faire un paralèlle, nous n'apprendrons pas BOOTSTRAP Avant de connaitre le language CSS. 
+Nous apprenons à marché avant de courir. 
+--------------------------------------------------------------------------------------------------------------------
+JQUERY et JQUERY UI :
+jQuery est le noyau de base, c'est lui qui gere les selecteurs les evenements, l'ajax. jQueryUI contient des fonctionnalités des fonctionnalités supplémentaires pour l'UI. Il est nécessaire d'inclure 
+jQuery pour pouvoir utiliser jQuery ui. 
+---------------------------------------------
+Cas d'utilisation 
+avec le js (ou jquery, ou une librairie js)nous pouvons créer : 
+- slider, tchat (type FB), DIAPORAMA, MENU DEROULANT, CAROUEL, ONE PAGE, ZOOM (photo site ecommerce), DRAG&DROP, RECHERCHE EN AUTOCOMPLETION (GOOGLE), ... et plus généralement : des mouvements, des evenements, animations et de l'interactivité. 
+
+Pour mieux comprendre, sur 1 un site web, prenons le cas concret d'un formulaire :
+
+1 formulaire est déclaré en html, il est mis en forme en css (html + css= conception), mais si nous voulons préciser à l'internaute si ses saisie sont corrects (exemples : mdp concordant/ non-concordant, pseudo disponible/indispensable, etc.) nous aurons besoin du js/jquery (mais aussi de PHP+SQL) est un langage qui transporte les données (souvent xml ou json) ce qui forme l'AJAX.
+- PHP nous permet de récupérer les données saisies 
+- SQL nous permet de sauvegarder les données saisies.
+- JS/JQUERY nous permet de faire des controles en direct (pendant la saisie).
+- Ajax : passage d'inforamtions, nouveaux affichages dans la page, le tout tres rapidement et sans rechargement de page ! 
+     - DOM (DOUCUMENT OBJECT MODEL)
