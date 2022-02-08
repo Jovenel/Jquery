@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  
+  <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; border: 1px 1px 1px 1px;}
+  
+  </style>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+
+  <img src="drag_image.png" alt="" class="drag">
+  <script text="text/javascript">
+      /*
+      L'evenement load se déclanche à la fin du processus de chaargement du document.
+      */ 
+     function start () {
+      $(".drag").draggable();
+    }
+    window.onload = start;
+    
+    </script>
+</body>
+</html>
