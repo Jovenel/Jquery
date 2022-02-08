@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<STyle>
+    body{
+        
+        margin: 20%;
+    }
+    .slideshow {
+   width: 350px;
+   height: 200px;
+   overflow: hidden;
+   border: 3px solid #F2F2F2;
+}
+
+.slideshow ul {
+    /* 4 images donc 4 x 100% */
+   width: 400%;
+   height: 200px;
+   padding:0; margin:0;
+   list-style: none;
+}
+.slideshow li {
+   float: left;
+}
+</STyle>
+<body>
+    <div class="slideshow">
+        <ul>
+            <li><img src="image1.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image2.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image3.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image4.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image5.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image6.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image7.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image8.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image9.jpg" alt="" width="350" height="200" /></li>
+            <li><img src="image10.jpg" alt="" width="350" height="200" /></li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+      setInterval(function(){
+         $(".slideshow ul").animate({marginLeft:-350},800,function(){
+            $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+         })
+      }, 3500);
+   });
+
+
+    </script>
+</body>
+</html>
