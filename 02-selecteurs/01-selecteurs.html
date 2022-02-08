@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selecteur</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Comment selectionner des éléments de la page web (dom) pour effectuer des traitements ?</h1>
+		
+  <div class="avion"> Avion1 </div>
+  <div class="avion"> Avion2 </div>
+  <div class="avion"> Avion3 </div>
+
+  <div class="voiture">Voiture1</div>
+  <div class="voiture">Voiture2</div>
+  <div class="voiture">Voiture3</div>
+  
+  <table border="1">
+    <tr><td>TD #0</td><td>TD #1</td><td>TD #2</td></tr>
+    <tr><td>TD #3</td><td>TD #4</td><td>TD #5</td></tr>
+    <tr><td>TD #6</td><td>TD #7</td><td>TD #8</td></tr>
+  </table>
+
+  <p>paragraphe 1</p>
+  <p>paragraphe 2 </p>
+  <p>paragraphe 3 </p>
+  <p>paragraphe 4 </p>
+  <p>paragraphe 5 </p>
+
+  <section id="masection">Section</section>
+  
+  <article>article</article>
+  
+  <aside>aside</aside>
+
+  <span>span</span>
+
+  <div id="resultat">resultat...</div>
+  
+  <script>
+ /*
+ Comment selectionner des éléments de la page web effectuer des traitements ? 
+ */
+
+
+ // ------------------------------------SELECTION DE BALISE 
+ let maBalise = $('span') // je séléctionne l'élément span et le garde en memoire dans la variable nommée "maBalise"
+ 
+ $(maBalise).css('color','purple'); // Je change la propriété css color maBalise donc de mon element span. 
+
+ // ------------------------------------SELECTION ID 
+
+ let monID =$('#masection'); // Je selection l'élément #masection et le garde en mémoire dans la variable monID.
+
+ $(monID).css('color','red'); // je change la propriété css color de monID donc de mon element #masection.
+
+ // -------------------------------------SELECTION CLASS 
+ let car= $(".voiture");
+// $(car).css('color','blue') 
+ $(".voiture:first").css('color','green')
+ $(".voiture:nth(1)").css('color','red')
+
+ // -------------------------------------SELECTION MULTIPLE
+ let mesElements = $('h1, article, aside') // Je selectionne différens élément : h1, article, aside.
+    $(mesElements).css('color','orange') // Je modifie la couleur css de mes éléments : h1, article, aside.
+ 
+
+ // ------------------------------------- RESUME DES PRINCIPAUX SELECTEURS 
+
+ /*
+ Selection de balise : $('span')
+ Selection d'un #id :('#id')
+ Selection d'une .class: $('.class')
+ Selection d'un élément par lui même  : $(this)
+ Selection d'un élément par sa balise et son type : $('input:text')
+ Selection d'un élément par son attribut  : $('img[alt]')
+ Selection plusieurs selecteurs en même temps : $('p,h1,#id')
+
+ 
+ */
+  </script>
+</body>
+</html>
