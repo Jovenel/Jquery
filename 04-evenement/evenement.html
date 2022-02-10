@@ -87,7 +87,118 @@
 		
     <script>
 
-      
+      // ------------------------------------------EVENEMENT CONCERNANT LE DEPLACEMENT DE LA SOURIS 
+
+      // EVENEMENT MOUSEOVER 
+
+      // Lorsuqe nous alons passer notre souris (mouseover) sur les éléments ayant la class "zone1", nous changeronsleur background en rouge
+
+      $('.zone1').on("mouseover",function(){
+          $(this).css("background","red")
+          $('#info').text('je suis sur la zone 1 !');
+      })
+
+      // EVENEMENT MOUSEMOVE
+      // Lorsque nous allons bouger sur l'élément ayant la class zone2 nous changerons leur contenu avec la position de notre curseur dans la zone
+$('.zone2').on("mousemove",function(event){ // event est objet, nous pouvons inspecter ces propriétés et méthodes dans la console
+    $(".zone2").text("pageX:"+event.pageX + ", pageY: " + event.pageY)
+    $('#info').text('je suis sur la zone 2 !');
+})
+      // EVENEMENT MOUSEout 
+      // Nous changerons leur background en rouge en quittant la zone.
+      $('.zone3').on("mouseout",function(event){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 3 !');
+})
+
+      // EVENEMENT MOUSENTER
+    // Lorsque nous allons entrer et sortir de la zone ayant la class "zone4"? nous allons changer le background en rouge
+      $('.zone4').on("mouseenter",function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 4 !');
+})
+$('.zone4').on("mouseleave",function(){
+    $(this).css("background","blue")
+    $('#info').text('je suis sur la zone 4 !');
+})
+      // EVENEMENT Concernant le clic
+      $('.zone5').on("mouseup",function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 4 !');
+})
+
+// EVENEMENT MOUSEDOWN 
+// Lorsque nous allons enfoncer le click sur les éléments ayant la class "zone6" nous changerons leur background en rouge
+$('.zone6').on("mousedown",function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 6 !');
+})
+
+// EVENEMENT ONCLICK  
+// Lorsque nous allons clickER sur les éléments ayant la class "zone7" nous changerons leur background en rouge
+$('.zone7').on("click",function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 7 !');
+})
+// EVENEMENT dblCLICK  
+// Lorsque nous allons clickER 2 fois sur les éléments ayant la class "zone8" nous changerons leur background en rouge
+$('.zone8').on("dblclick",function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 8 !');
+})
+
+// EVENEMENT click droit  
+// Lorsque nous allons faire un click droit sur les éléments ayant la class "zone9" nous changerons leur background en rouge
+$('.zone9').contextmenu(function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 9 !');
+})
+
+// EVENEMENT CONCERNANT LE CLAVIER 
+
+// EVENEMENT BLUR 
+
+// Lorsque nous allons cliquer ailleurs apres avoir cliquer sur cet element ayant la class zone10, nous changerons leur background en rouge. 
+
+$('.zone10').on("blur",function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 10 !');
+})
+
+// EVENEMENT CHANGE 
+
+// // Lorsque nous allons changer l'option element ayant la class zone11, nous changerons leur background en rouge. 
+$('.zone11').on("change",function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 11 !');
+})
+
+// EVENEMENT KEYDOWN 
+// // Lorsque nous allons APPUEYR SUR element ayant la class zone11, nous changerons leur background en rouge. 
+
+$('.zone12').on("keydown",function(){
+    $(this).css("background","red")
+    $('#info').text('je suis sur la zone 12 !');
+})
+
+// EVENEMENT KEYUP
+$('.zone12').on("keyup",function(){
+    $(this).css("background","green")
+    $('#info').text('je suis sur la zone 12 !');
+})
+// // Lorsque nous allons relacher element ayant la class zone11, nous changerons leur background en rouge. 
+let position = $(window).scrollTop();
+$(window).scroll(function(){
+    
+    $('#info').text('je scroll!');
+   // let scroll = $(window).scrollTop();
+    if (scroll>position){
+    $('#info').css("background","lightgreen")}
+    else{
+    $('#info').css("background","#454545")}
+    position= scroll
+})
+
     </script>
   </body>
 </html>
